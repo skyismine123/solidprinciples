@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'solid-principles';
+
+  onOpen(): void{
+    window.open('https://www.facebook.com');
+  }
 }
