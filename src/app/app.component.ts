@@ -1,13 +1,14 @@
-import {Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  implements OnInit{
+export class AppComponent {
   title = 'solid-principles';
 
-  ngOnInit(): void {
+  onOpen(): void{
+    window.open('https://www.facebook.com');
   }
 }
