@@ -8,15 +8,12 @@
 </div>
 
 <div class="content" role="main">
-  <div>
-    <header> Facebook </header>
-    <div class="mini-stat clearfix bg-facebook rounded">
-      <span class="mini-stat-icon" (click)="onClick()"><i class="fa fa-facebook fg-facebook"></i></span>
-      <div class="mini-stat-info">
-        <span>5,762</span>
-      </div>
-    </div>
-  </div>
+  <iv-social-network-widget [header]="'Facebook'">
+    <iv-facebook-content></iv-facebook-content>
+  </iv-social-network-widget>
+  <iv-social-network-widget [header]="'Twitter'">
+    <iv-twitter-content></iv-twitter-content>
+  </iv-social-network-widget>
 </div>
 
 
