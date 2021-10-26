@@ -1,5 +1,5 @@
 import {Component, ContentChild, Inject, Input, OnInit} from '@angular/core';
-import {Clickable, FacebookContentComponent} from '../facebook-content.component';
+import {Clickable} from '../facebook-content.component';
 import {AbstractReload, CLICKABLE_CONTENT, RELOADABLE_PROVIDER} from './abstract-content';
 
 @Component({
