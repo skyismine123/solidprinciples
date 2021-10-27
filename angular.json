@@ -13,8 +13,13 @@
           "flat": true,
           "prefix": "iv",
           "style": "scss"
+        },
+        "@schematics/angular:service": {
+          "skipTests": true,
+          "flat": true
         }
       },
+
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
