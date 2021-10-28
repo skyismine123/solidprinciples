@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'solid-principles';
-
-  onClick(): void{
-    console.log('Specific implementation logic for on click');
-  }
 }
