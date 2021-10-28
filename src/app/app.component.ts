@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'solid-principles';
 
   onClick(): void{
-    window.open('https://www.facebook.com');
+    console.log('Specific implementation logic for on click');
   }
 }
