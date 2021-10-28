@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
@@ -11,6 +11,10 @@ class CustomReloadingService implements AbstractReload {
   reload(): void{
     console.log('MY CUSTOM RELOAD');
   }
+}
+
+function initializeApp(): any {
+    console.log('custom stuff');
 }
 
 @NgModule({
@@ -27,7 +31,12 @@ class CustomReloadingService implements AbstractReload {
     {
       provide: RELOADABLE_PROVIDER,
       useClass: CustomReloadingService
-    }
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => initializeApp,
+      multi: true
+    },
   ],
   bootstrap: [AppComponent]
 })
