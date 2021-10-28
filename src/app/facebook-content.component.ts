@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Clickable, CLICKABLE_CONTENT} from './social-network/abstraction';
 
 @Component({
   selector: 'iv-facebook-content',
@@ -111,13 +112,17 @@ import { Component, OnInit } from '@angular/core';
       padding: 10px;
     }
     `
+  ],
+  providers: [
+    {provide: CLICKABLE_CONTENT,useExisting:FacebookContentComponent}
   ]
 })
-export class FacebookContentComponent implements OnInit {
+export class FacebookContentComponent implements  Clickable {
 
   constructor() { }
 
-  ngOnInit(): void {
+  click(): void {
+    console.log(' FB click!');
   }
 
 }

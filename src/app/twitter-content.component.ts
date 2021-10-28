@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Clickable, CLICKABLE_CONTENT} from './social-network/abstraction';
 
 @Component({
   selector: 'iv-twitter-content',
@@ -111,13 +112,16 @@ import { Component, OnInit } from '@angular/core';
       padding: 10px;
     }
     `
+  ],
+  providers: [
+    {provide: CLICKABLE_CONTENT,useExisting:TwitterContentComponent}
   ]
 })
-export class TwitterContentComponent implements OnInit {
+export class TwitterContentComponent implements Clickable {
 
   constructor() { }
 
-  ngOnInit(): void {
+  click(): void {
+    console.log(' TW click!');
   }
-
 }

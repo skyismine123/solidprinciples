@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ContentChild, Input, OnInit} from '@angular/core';
+import {Clickable, CLICKABLE_CONTENT} from './abstraction';
 
 @Component({
   selector: 'iv-social-network-widget',
@@ -113,11 +114,16 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SocialNetworkWidgetComponent implements OnInit {
 
+  @ContentChild(CLICKABLE_CONTENT,{ static: true }) content: Clickable;
+
   @Input() title: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    if(this.content){
+      this.content.click();
+    }
   }
 
 }
