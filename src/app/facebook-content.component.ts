@@ -1,11 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'iv-social-network-widget',
+  selector: 'iv-facebook-content',
   template: `
-    <div>
-      <header> {{ title }} </header>
-      <ng-content></ng-content>
+    <div class="mini-stat clearfix bg-facebook rounded">
+      <span class="mini-stat-icon"><i class="fa fa-facebook fg-facebook"></i></span>
+      <div class="mini-stat-info">
+        <span>5,762</span>
+      </div>
     </div>
   `,
   styles: [
@@ -111,9 +113,7 @@ import {Component, Input, OnInit} from '@angular/core';
     `
   ]
 })
-export class SocialNetworkWidgetComponent implements OnInit {
-
-  @Input() title: string;
+export class FacebookContentComponent implements OnInit {
 
   constructor() { }
 

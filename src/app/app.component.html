@@ -8,8 +8,13 @@
 </div>
 
 <div class="content flex-row" role="main">
-  <iv-social-network-widget [type]="'facebook'"></iv-social-network-widget>
-  <iv-social-network-widget [type]="'twitter'"></iv-social-network-widget>
+  <iv-social-network-widget [title]="'Facebook'">
+   <iv-facebook-content></iv-facebook-content>
+  </iv-social-network-widget>
+  <iv-social-network-widget [title]="'twitter'">
+    <iv-twitter-content></iv-twitter-content>
+  </iv-social-network-widget>
+  <iv-social-network-widget [title]="'test'">
+    <h1> new widget is coming </h1>
+  </iv-social-network-widget>
 </div>
-
-

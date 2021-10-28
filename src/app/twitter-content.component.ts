@@ -1,11 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'iv-social-network-widget',
+  selector: 'iv-twitter-content',
   template: `
-    <div>
-      <header> {{ title }} </header>
-      <ng-content></ng-content>
+    <div class="mini-stat clearfix bg-twitter rounded">
+      <span class="mini-stat-icon"><i class="fa fa-twitter fg-twitter"></i></span>
+      <div class="mini-stat-info">
+        <span>7,153</span>
+      </div>
     </div>
   `,
   styles: [
@@ -111,9 +113,7 @@ import {Component, Input, OnInit} from '@angular/core';
     `
   ]
 })
-export class SocialNetworkWidgetComponent implements OnInit {
-
-  @Input() title: string;
+export class TwitterContentComponent implements OnInit {
 
   constructor() { }
 
